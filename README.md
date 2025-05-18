@@ -87,6 +87,9 @@ A robust, queue-based notification service built with **FastAPI**, **RabbitMQ**,
 
 ### Send a Notification
 
+Go to http://localhost:8000/docs
+Click on the POST /notifications endpoint. Then click “Try it out”.
+
 ```bash
 # Send an email notification
 POST /notifications
