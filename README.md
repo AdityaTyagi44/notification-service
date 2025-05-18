@@ -61,6 +61,10 @@ A robust, queue-based notification service built with **FastAPI**, **RabbitMQ**,
    # Using Docker (recommended)
    docker run -d --hostname rabbit --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
    ```
+   Once it's running, access the RabbitMQ Management UI at:
+   http://localhost:15672
+   Username: guest
+   Password: guest
 
 4. Initialize the database
    ```bash
