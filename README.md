@@ -91,7 +91,6 @@ POST /notifications
     "user_id": "1111-2222-3333-4444",
     "type": "email",
     "content": "Welcome to the platform!"
-    }
 }
 ```
 
