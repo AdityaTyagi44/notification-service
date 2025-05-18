@@ -65,9 +65,10 @@ A robust, queue-based notification service built with **FastAPI**, **RabbitMQ**,
 4. Initialize the database
    ```bash
    python -m app.init_db
-This will create a test user with the following ID:
-user_id: 1111-2222-3333-4444
+   This will create a test user with the following ID:
+   user_id: 1111-2222-3333-4444
    ```
+   
 
 5. Start the services
    ```bash
