@@ -45,7 +45,7 @@ A robust, queue-based notification service built with **FastAPI**, **RabbitMQ**,
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/yourusername/notification-service.git
+   git clone https://github.com/AdityaTyagi44/notification-service.git
    cd notification-service
    ```
 
