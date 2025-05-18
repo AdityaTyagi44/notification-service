@@ -106,22 +106,6 @@ POST /notifications
 ```bash
 # Get all notifications for a user
 GET /users/{user_id}/notifications
-
-Response:
-{
-  "id": "1111-2222-3333-4444",
-  "name": "Aditya Tyagi",
-  "email": "aditya@example.com",
-  "phone": "9876543210",
-  "notifications": [
-    {
-      "type": "email",
-      "content": "Hello Aditya!",
-      "status": "sent",
-      "sent_at": "2025-05-17T18:45:00"
-    }
-  ]
-}
 ```
 
 ## 🏗️ Project Structure
