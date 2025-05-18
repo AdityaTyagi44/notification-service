@@ -68,6 +68,8 @@ docker run -d --hostname rabbit --name rabbitmq \
 4. Initialize the database
    ```bash
    python -m app.init_db
+This will create a test user with the following ID:
+user_id: 1111-2222-3333-4444
    ```
 
 5. Start the services
@@ -85,14 +87,12 @@ docker run -d --hostname rabbit --name rabbitmq \
 
 ```bash
 # Send an email notification
-POST /api/notifications/
+POST /notifications
 
 {
-    "user_id": "user123",
+    "user_id": "1111-2222-3333-4444",
     "type": "email",
-    "content": {
-        "subject": "Welcome!",
-        "body": "Welcome to our platform!"
+    "content": "Welcome to the platform!"
     }
 }
 ```
@@ -101,7 +101,23 @@ POST /api/notifications/
 
 ```bash
 # Get all notifications for a user
-GET /api/notifications/users/{user_id}
+GET /users/{user_id}/notifications
+
+Response:
+{
+  "id": "1111-2222-3333-4444",
+  "name": "Aditya Tyagi",
+  "email": "aditya@example.com",
+  "phone": "9876543210",
+  "notifications": [
+    {
+      "type": "email",
+      "content": "Hello Aditya!",
+      "status": "sent",
+      "sent_at": "2025-05-17T18:45:00"
+    }
+  ]
+}
 ```
 
 ## 🏗️ Project Structure
