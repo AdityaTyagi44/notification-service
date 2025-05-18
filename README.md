@@ -59,10 +59,7 @@ A robust, queue-based notification service built with **FastAPI**, **RabbitMQ**,
    # Start RabbitMQ Server
    # Windows: RabbitMQ will start automatically after installation
    # Using Docker (recommended)
-docker run -d --hostname rabbit --name rabbitmq \
-  -p 5672:5672 -p 15672:15672 rabbitmq:3-management
-
-   # Linux: sudo systemctl start rabbitmq-server
+   docker run -d --hostname rabbit --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
    ```
 
 4. Initialize the database
