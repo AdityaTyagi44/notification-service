@@ -148,17 +148,17 @@ The service can be configured through environment variables:
 - `DATABASE_URL`: SQLite database URL (default: `sqlite:///notifications.db`)
 - `RETRY_COUNT`: Maximum retry attempts for failed notifications (default: `3`)
 
-## 🤝 Contributing
+## 📄 Assumptions
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+- The user database is pre-populated manually (via `init_db.py`) for testing purposes.
+- Notifications are not actually sent over the internet:
+  - **Email** and **SMS** are mocked (they are printed to the console).
+  - **In-app** notifications are stored in the database and returned via API.
+- There is no authentication or user login system.
+- Only one queue (`notifications`) is used for simplicity.
+- SQLite is used as the database for easy local development and portability.
+- Environment variables like `RABBITMQ_URL` or `RETRY_COUNT` are not required to be set unless customization is needed.
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
