@@ -7,7 +7,7 @@ db = SessionLocal()
 
 # Add test user
 user = User(
-    id=str(uuid.uuid4()),
+    id="1111-2222-3333-4444",   #Harcoded user id
     name="Aditya Tyagi",
     email="aditya@example.com",
     phone="9876543210"
